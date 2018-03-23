@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>.attr()메소드로 속성값 다루기</title>
+	<style type = "text/css">
+		img.po{width:300px;border:1px solid black;}
+		img.tai{width:300px;height:300px;border:1px solid black;background-image:url(images/tai.jpg);background-repeat:no-repeat;background-size:cover;}
+	</style>
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+
+
+		$(document).ready(function(){
+
+			var $po = $("img.po");
+			var $tai = $("img.tai")
+
+			$po.attr({
+				"title" : "쿵푸팬더 재밌어요"
+			});
+
+			$tai.removeAttr("class");
+
+		});
+
+	//]]>
+	</script>
+</head>
+<body>
+	<h1>.attr() 메소드 활용</h1>
+	<h2>.attr()메소드를 이용한 속성검사</h2>
+	<img src="images/po.jpg" alt="쿵푸팬더" class = "po" />
+
+	<hr>
+
+	<h2>.attr()메소드를 이용한 속성지정</h2>
+	<img class="tai">
+</body>
+</html>
